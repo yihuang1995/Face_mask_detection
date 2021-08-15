@@ -13,7 +13,9 @@ MobileNetV2.py            -> implement MobileNet V2 architecture with PyTorch <b
 MobileNetV2_mask_fulldata -> Final Model  <br>
 
 ## Pipeline:
-![image](https://github.com/yihuang1995/Face_mask_detection/blob/main/Images/pipeline.png)
+<p align="center">
+  <img src="https://github.com/yihuang1995/Face_mask_detection/blob/main/Images/pipeline.png">
+</p>
 
 ## YOLOv5 Face & Mask Detection:
 Detection instructions are in 'yolov5_face_detection.ipynb', download YOLOv5 from github <br>
@@ -24,11 +26,38 @@ https://www.kaggle.com/andrewmvd/face-mask-detection <br>
 https://www.kaggle.com/ashishjangra27/face-mask-12k-images-dataset <br>
 https://www.pyimagesearch.com/2020/05/04/covid-19-face-mask-detector-with-opencv-keras-tensorflow-and-deep-learning <br>
 
+## Experiments on Dataset
+When training MobileNetv2 mask classifier, we tested performance of the model on three different training dataset. The first one is trained on only the fake mask dataset, the second one is trained on images with real mask, and the last one is two dataset combined.
+<p align="center">
+  <img src="https://github.com/yihuang1995/Face_mask_detection/blob/main/Images/dataset_comparison.png">
+</p>
+
+The validation dataset for this comparison is two dataset combiend and we balanced the images from these dataset, and we trained each model in 10 epoches. The fake mask dataset's performance is somehow better than the real one. It might due to the reason that the real mask dataset has low resolution and also the images only contain the faces without the background, it losses information other than the faces. The two dataset combined has the highest accuracy on the validation dataset.
+
 ## Applications:
-**Image:**<br>
-![image](https://user-images.githubusercontent.com/72787973/129308512-31e78558-fdd7-4ab3-bc1c-a248ae15415a.png)
-![image](https://user-images.githubusercontent.com/72787973/129308523-325dc78b-36aa-4d8a-9603-474e763bcd98.png)
-![image](https://user-images.githubusercontent.com/72787973/129308529-60b8f411-35ec-421b-9d79-b4a1d74024e6.png)
+**Single Face:**<br>
+<p align="center">
+  <img src="https://github.com/yihuang1995/Face_mask_detection/blob/main/Images/yann_detect.png">
+</p>
+
+**Multiple Faces:**<br>
+<p align="center">
+  <img src="https://github.com/yihuang1995/Face_mask_detection/blob/main/Images/multi_detection.png">
+</p>
+The photo is detected by FaceNet + MobileNetv2 combination model. It gives the right prediction for all faces.
+<br/><br/>
+
+<p align="center">
+  <img src="https://github.com/yihuang1995/Face_mask_detection/blob/main/Images/multi_detect2.png">
+</p>
+This photo is also detected by FaceNet + MobileNetv2 combination model. For two left faces, the prediction is wrong, we believe it is due to the limitation of the training data.
+<br/><br/>
+
+<p align="center">
+  <img src="https://github.com/yihuang1995/Face_mask_detection/blob/main/Images/yolov5_detect.png">
+</p>
+This photo is detected by YOLOv5 model trained on images with bounding boxes and labels. The performance is better than the FaceNet + MobileNetv2 combo.
+<br/><br/>
 
 **Video:**
 https://youtu.be/jXvMSskHRbo
