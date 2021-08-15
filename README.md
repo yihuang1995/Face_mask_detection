@@ -74,4 +74,4 @@ https://youtu.be/Mr98Dw70jJk
 
 ## Conclusion:
 YOLOv5's performance is better than FaceNet+MobileNetv2 combined. Using image with bounding box and labels can obtrain a better model, whereas this type of dataset is often much less than image with label dataset. The whole bottleneck of face and mask detection is the limitation of dataset, images under different conditions can be added in the future to train a more powerful mask detection model.
-# Face_mask_detection
+
