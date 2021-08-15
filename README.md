@@ -13,7 +13,7 @@ MobileNetV2.py            -> implement MobileNet V2 architecture with PyTorch <b
 MobileNetV2_mask_fulldata -> Final Model  <br>
 
 ## Pipeline:
-![image](https://github.com/riccardozzz/DL_Final_Proj/blob/main/Images/pipeline.png)
+![image](https://github.com/yihuang1995/Face_mask_detection/blob/main/Images/pipeline.png)
 
 ## YOLOv5 Face & Mask Detection:
 Detection instructions are in 'yolov5_face_detection.ipynb', download YOLOv5 from github <br>
